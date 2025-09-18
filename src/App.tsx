@@ -2,24 +2,29 @@ import React, { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { StripeProvider } from './contexts/StripeContext';
+import { RealtimeProvider } from './contexts/RealtimeContext';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import Sidebar from './components/Layout/Sidebar';
 import Header from './components/Layout/Header';
 import Dashboard from './components/Dashboard/Dashboard';
+import RealtimeDashboard from './components/Dashboard/RealtimeDashboard';
 import TransactionList from './components/Transactions/TransactionList';
+import RealtimeTransactionList from './components/Transactions/RealtimeTransactionList';
 import BudgetManager from './components/Budget/BudgetManager';
 import Reports from './components/Reports/Reports';
 import Calculator from './components/Calculator/Calculator';
 import AdminDashboard from './components/Admin/AdminDashboard';
 import PaymentIntegration from './components/Payments/PaymentIntegration';
 import OnboardingModal from './components/Onboarding/OnboardingModal';
+import LandingPage from './components/Landing/LandingPage';
 
 const AppContent: React.FC = () => {
   const { isAuthenticated, user } = useAuth();
   const [activeTab, setActiveTab] = useState('dashboard');
   const [isLoginMode, setIsLoginMode] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showLanding, setShowLanding] = useState(true);
   const [showOnboarding, setShowOnboarding] = useState(() => {
     return !localStorage.getItem('onboardingCompleted');
   });
@@ -50,11 +55,11 @@ const AppContent: React.FC = () => {
   const renderContent = () => {
     switch (activeTab) {
       case 'dashboard':
-        return <Dashboard />;
+        return <RealtimeDashboard />;
       case 'income':
-        return <TransactionList type="income" />;
+        return <RealtimeTransactionList type="income" />;
       case 'expenses':
-        return <TransactionList type="expenditure" />;
+        return <RealtimeTransactionList type="expenditure" />;
       case 'budget':
         return <BudgetManager />;
       case 'reports':
@@ -64,12 +69,18 @@ const AppContent: React.FC = () => {
       case 'payments':
         return <PaymentIntegration />;
       case 'admin':
-        return user?.role === 'admin' ? <AdminDashboard /> : <Dashboard />;
+        return user?.role === 'admin' ? <AdminDashboard /> : <RealtimeDashboard />;
       default:
-        return <Dashboard />;
+        return <RealtimeDashboard />;
     }
   };
 
+  // Show landing page first
+  if (showLanding && !isAuthenticated) {
+    return <LandingPage onGetStarted={() => setShowLanding(false)} />;
+  }
+
+  // Show auth forms after landing page
   if (!isAuthenticated) {
     return isLoginMode ? (
       <Login onToggleMode={() => setIsLoginMode(false)} />
@@ -156,7 +167,9 @@ function App() {
   return (
     <StripeProvider>
       <AuthProvider>
-        <AppContent />
+        <RealtimeProvider>
+          <AppContent />
+        </RealtimeProvider>
       </AuthProvider>
     </StripeProvider>
   );

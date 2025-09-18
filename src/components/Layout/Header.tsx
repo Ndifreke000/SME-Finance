@@ -1,5 +1,6 @@
 import React from 'react';
-import { Bell, Search, HelpCircle, Menu } from 'lucide-react';
+import { Search, HelpCircle, Menu } from 'lucide-react';
+import NotificationCenter from './NotificationCenter';
 
 interface HeaderProps {
   title: string;
@@ -34,12 +35,7 @@ const Header: React.FC<HeaderProps> = ({ title, onMenuClick }) => {
             <HelpCircle size={20} />
           </button>
           
-          <button className="relative p-2 text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition-colors">
-            <Bell size={20} />
-            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-              3
-            </span>
-          </button>
+          <NotificationCenter />
         </div>
       </div>
     </header>
