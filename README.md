@@ -1,320 +1,293 @@
-# NairaBooks - Nigerian SME Financial Management System
+# 🚀 SME Finance - Nigerian SME Financial Management Platform
 
 <div align="center">
-  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
-  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
-  <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white"/>
+
+![SME Finance Logo](https://img.shields.io/badge/SME-Finance-blue?style=for-the-badge&logo=react)
+
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.1-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.2-646CFF?style=flat&logo=vite)](https://vitejs.dev/)
+
+**Real-time Financial Management • AI-Powered Insights • Nigerian Banking Integration**
+
+[🎯 Live Demo](#) • [📖 Documentation](#) • [🚀 Quick Start](#quick-start) • [🤝 Contributing](#contributing)
+
 </div>
 
-## 🌟 Overview
+---
 
-NairaBooks is a sophisticated financial management system designed specifically for Nigerian Small and Medium Enterprises (SMEs). Our platform combines modern technology with local business requirements to deliver a comprehensive solution for financial tracking, reporting, and business intelligence.
+## ✨ Features
 
-🔗 [Live Demo](https://grand-tulumba-1a26ab.netlify.app)
+<table>
+<tr>
+<td width="50%">
 
-## ✨ Key Features
+### 🎯 **Core Features**
+- ��� **Real-time Dashboard** - Live updates every 5s
+- 💰 **Transaction Management** - Income/Expense tracking
+- 📈 **Budget Planning** - Smart budget allocation
+- 📋 **Financial Reports** - Comprehensive analytics
+- 🧮 **Naira Calculator** - Multi-currency support
 
-### 💼 Business Management
-- **Multi-Business Support**: Manage multiple businesses under one account
-- **Role-Based Access Control**: Customize access levels for team members
-- **Automated Backups**: Daily automated data backups
+</td>
+<td width="50%">
 
-### 💰 Financial Tools
-- **Naira-Based Transactions**: Native support for Nigerian currency
-- **Smart Categorization**: Auto-categorize income and expenses
-- **Bank Integration**: Connect with major Nigerian banks
-- **Budget Planning**: Create and track budgets with notifications
+### 🚀 **Advanced Features**
+- 🤖 **AI Financial Insights** - ML-powered recommendations
+- 🏦 **Banking Integration** - 15+ Nigerian banks
+- 🔔 **Real-time Notifications** - Live alerts
+- 👥 **Admin Dashboard** - User management
+- 📱 **Mobile Responsive** - Works on all devices
 
-### 📊 Advanced Analytics
-- **Real-time Dashboard**: Live financial metrics and KPIs
-- **Custom Reports**: Generate detailed financial reports
-- **Profit & Loss Analysis**: Comprehensive P&L statements
-- **Trend Analysis**: Visual representations of financial trends
+</td>
+</tr>
+</table>
 
-### 🔐 Security & Compliance
-- **Bank-Grade Security**: End-to-end encryption
-- **Nigerian Tax Compliance**: Built-in tax calculation and reporting
-- **Audit Trail**: Complete transaction history
+---
 
-### 💳 Payment Processing
-- **Multiple Payment Options**: Support for various payment methods
-- **Invoice Generation**: Professional invoice creation
-- **Payment Reminders**: Automated payment follow-ups
+## 🏗️ Project Structure
 
-## 🚀 Getting Started
+```
+SME-Finance/
+├── 📁 public/                    # Static assets
+├── 📁 src/
+│   ├── 📁 components/           # React components
+│   │   ├── 📁 AI/              # AI insights components
+│   │   │   └── AIInsights.tsx
+│   │   ├── 📁 Admin/           # Admin dashboard
+│   │   │   └── AdminDashboard.tsx
+│   │   ├── 📁 Auth/            # Authentication
+│   │   │   ├── Login.tsx
+│   │   │   └── Register.tsx
+│   │   ├── 📁 Banking/         # Banking integration
+│   │   │   └── BankingIntegration.tsx
+│   │   ├── 📁 Budget/          # Budget management
+│   │   │   ├── BudgetForm.tsx
+│   │   │   └── BudgetManager.tsx
+│   │   ├── 📁 Calculator/      # Currency calculator
+│   │   │   └── Calculator.tsx
+│   │   ├── 📁 Dashboard/       # Main dashboard
+│   │   │   ├── Dashboard.tsx
+│   │   │   ├── RealtimeDashboard.tsx
+│   │   │   └── MetricCard.tsx
+│   │   ├── 📁 Landing/         # Landing page
+│   │   │   └── LandingPage.tsx
+│   │   ├── 📁 Layout/          # Layout components
+│   │   │   ├── Header.tsx
+│   │   │   ├── Sidebar.tsx
+│   │   │   ├── EmptyState.tsx
+│   │   │   └── NotificationCenter.tsx
+│   │   ├── 📁 Onboarding/      # User onboarding
+│   │   │   └── OnboardingModal.tsx
+│   │   ├── 📁 Payments/        # Payment processing
+│   │   │   ├── PaymentIntegration.tsx
+│   │   │   └── PaymentModal.tsx
+│   │   ├── 📁 Reports/         # Financial reports
+│   │   │   └── Reports.tsx
+│   │   └── 📁 Transactions/    # Transaction management
+│   │       ├── TransactionForm.tsx
+│   │       ├── TransactionList.tsx
+│   │       └── RealtimeTransactionList.tsx
+│   ├── 📁 contexts/            # React contexts
+│   │   ├── AuthContext.tsx
+│   │   ├── StripeContext.tsx
+│   │   └─��� RealtimeContext.tsx
+│   ├── 📁 hooks/               # Custom hooks
+│   │   ├── useFinancialData.ts
+│   │   └── useRealtimeAnalytics.ts
+│   ├── 📁 services/            # API services
+│   │   └── api.ts
+│   ├── 📁 types/               # TypeScript types
+│   │   └── index.ts
+│   ├── 📁 data/                # Mock data
+│   │   └── mockData.ts
+│   ├── App.tsx                 # Main app component
+│   ├── main.tsx               # App entry point
+│   └── index.css              # Global styles
+├── 📄 package.json            # Dependencies
+├── 📄 tailwind.config.js      # Tailwind configuration
+├── 📄 tsconfig.json           # TypeScript configuration
+├── 📄 vite.config.ts          # Vite configuration
+└── 📄 README.md               # This file
+```
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js (v16 or higher)
+- Node.js 18+ 
 - npm or yarn
-- Git
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Ndifreke000/SME-Finance.git
-   cd SME-Finance
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/your-username/SME-Finance.git
+cd SME-Finance
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+# Install dependencies
+npm install
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
+# Start development server
+npm run dev
 
-4. **Start the development server**
-   ```bash
-   npm run dev
-   ```
+# Build for production
+npm run build
+```
 
-5. **Build for production**
-   ```bash
-   npm run build
-   ```
+### 🎯 Available Scripts
 
-## 🛠️ Technology Stack
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
 
-- **Frontend Framework**: React 18 with TypeScript
-- **State Management**: Context API + Custom Hooks
-- **Styling**: Tailwind CSS
-- **Charts**: Recharts
-- **Payment Processing**: Stripe Integration
-- **Build Tool**: Vite
-- **Testing**: Vitest + React Testing Library
+---
 
-## 📱 Mobile Responsiveness
+## 🛠️ Tech Stack
 
-NairaBooks is fully responsive and optimized for:
-- Desktop browsers
-- Tablets
-- Mobile devices
-- Progressive Web App (PWA) support
+<div align="center">
 
-## 🔒 Security Features
+| Frontend | Styling | Build | Backend Ready |
+|----------|---------|-------|---------------|
+| ![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=white) | ![Tailwind](https://img.shields.io/badge/-Tailwind-38B2AC?style=flat&logo=tailwind-css&logoColor=white) | ![Vite](https://img.shields.io/badge/-Vite-646CFF?style=flat&logo=vite&logoColor=white) | ![API](https://img.shields.io/badge/-API%20Ready-00D9FF?style=flat&logo=fastapi&logoColor=white) |
+| ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) | ![Recharts](https://img.shields.io/badge/-Recharts-FF6B6B?style=flat&logo=chart.js&logoColor=white) | ![ESLint](https://img.shields.io/badge/-ESLint-4B32C3?style=flat&logo=eslint&logoColor=white) | ![WebSocket](https://img.shields.io/badge/-WebSocket-010101?style=flat&logo=socket.io&logoColor=white) |
 
-- SSL/TLS encryption
-- Two-factor authentication
-- Session management
-- Regular security audits
-- Data encryption at rest
+</div>
 
-## 🌐 Browser Support
+---
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+## 🎨 Key Components
 
-## 📈 Performance Metrics
+### 🤖 AI Financial Insights
+```typescript
+// Real-time AI analysis with confidence scores
+const insights = useAIInsights();
+// Spending patterns, revenue forecasts, cost optimization
+```
 
-- Lighthouse Score: 95+
-- First Contentful Paint: < 1.5s
-- Time to Interactive: < 3s
-- Core Web Vitals Compliant
+### 🏦 Banking Integration
+```typescript
+// Support for 15+ Nigerian banks
+const banks = ['GTBank', 'Access Bank', 'UBA', 'Zenith', ...];
+// Real-time transaction syncing
+```
+
+### 📊 Real-time Dashboard
+```typescript
+// Live updates every 5 seconds
+const { data, isConnected } = useRealtime();
+// Dynamic charts and notifications
+```
+
+---
+
+## 🌟 Screenshots
+
+<div align="center">
+
+### 🏠 Landing Page
+![Landing Page](https://via.placeholder.com/800x400/4F46E5/FFFFFF?text=Professional+Landing+Page)
+
+### 📊 Real-time Dashboard
+![Dashboard](https://via.placeholder.com/800x400/10B981/FFFFFF?text=Real-time+Dashboard+with+AI+Insights)
+
+### 🏦 Banking Integration
+![Banking](https://via.placeholder.com/800x400/F59E0B/FFFFFF?text=Nigerian+Banking+Integration)
+
+</div>
+
+---
+
+## 🎯 Current Status
+
+<div align="center">
+
+### 📈 Development Progress
+
+```
+🎨 UI/UX Design        ████████████████████ 100%
+⚡ Real-time Features  ████████████████████ 100%
+🤖 AI Integration      ████████████████░░░░  80%
+🏦 Banking APIs        ████████████░░░░░░░░  60%
+📱 Mobile Responsive   ████████████████████ 100%
+��� Security           ████████░░░░░░░░░░░░  40%
+```
+
+**Overall: 80% Complete** 🚀
+
+</div>
+
+---
+
+## 🚧 Roadmap
+
+### 🎯 Phase 1: Foundation (Completed ✅)
+- [x] Professional UI/UX
+- [x] Real-time dashboard
+- [x] AI insights framework
+- [x] Banking integration UI
+
+### 🎯 Phase 2: Backend Integration (In Progress 🔄)
+- [ ] Production backend setup
+- [ ] Real banking API connections
+- [ ] User authentication system
+- [ ] Database integration
+
+### 🎯 Phase 3: Advanced Features (Planned 📋)
+- [ ] Mobile applications
+- [ ] Advanced AI models
+- [ ] Multi-user support
+- [ ] Compliance features
+
+---
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions! Here's how to get started:
 
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+### 📋 Development Guidelines
+- Follow TypeScript best practices
+- Use Tailwind CSS for styling
+- Write meaningful commit messages
+- Add tests for new features
+
+---
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+---
+
 ## 🙏 Acknowledgments
 
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vite](https://vitejs.dev/)
-- [Stripe](https://stripe.com/)
-- All our contributors and users
-
-## 📞 Support
-
-- Email: support@nairabooks.com
-- Twitter: [@NairaBooks](https://twitter.com/nairabooks)
-- Website: [www.nairabooks.com](https://www.nairabooks.com)
-
-## 🔄 Updates
-
-Stay tuned for regular updates! Follow our [Changelog](CHANGELOG.md) for detailed version history.
+- **Nigerian SME Community** for inspiration
+- **React Team** for the amazing framework
+- **Tailwind CSS** for beautiful styling
+- **Vite** for lightning-fast development
 
 ---
 
 <div align="center">
-  Made with ❤️ for Nigerian SMEs
+
+### 🌟 Star this repo if you find it helpful!
+
+[![GitHub stars](https://img.shields.io/github/stars/your-username/SME-Finance?style=social)](https://github.com/your-username/SME-Finance/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/your-username/SME-Finance?style=social)](https://github.com/your-username/SME-Finance/network/members)
+
+**Made with ❤️ for Nigerian SMEs**
+
+[⬆ Back to Top](#-sme-finance---nigerian-sme-financial-management-platform)
+
 </div>
-- **Nigerian Business Dashboard**: Visual summaries with charts showing Naira-based metrics
-- **Business Onboarding**: Step-by-step walkthrough tailored for Nigerian SMEs
-- **Professional Interface**: Clean, business-ready design suitable for Nigerian enterprises
-- **Instant Notifications**: Real-time feedback for all financial operations
-
-## 🛠️ Technology Stack
-
-- **Frontend**: React 18 with TypeScript for robust Nigerian business applications
-- **Styling**: Tailwind CSS optimized for Nigerian business aesthetics
-- **Data Visualization**: Recharts for Naira-based financial charts and analytics
-- **Icons**: Lucide React for professional business iconography
-- **Payment Processing**: Secure international-standard payment integration
-- **User Experience**: React Hot Toast for immediate transaction feedback
-- **Development**: Vite for fast, efficient Nigerian business application development
-
-## 📱 Responsive Design
-
-The application features a fully responsive design optimized for Nigerian business users across all devices:
-
-- **Desktop**: Full-featured layout perfect for office environments
-- **Tablet**: Optimized for Nigerian business owners on the go
-- **Mobile**: Touch-friendly interface for quick transaction entry and monitoring
-
-## 🎯 User Roles
-
-### Standard User
-- Manage business income and expenses in Naira
-- Create and track Nigerian business budgets
-- Generate compliance-ready financial reports
-- Process secure Naira payments
-- Use Naira-optimized calculator tools
-
-### Administrator
-- All user features plus:
-- Nigerian business user management and oversight
-- System activity monitoring for compliance
-- Nigerian business settings and category management
-- Advanced Naira-based analytics and reporting
-
-## 🚀 Getting Started
-
-### Demo Credentials
-
-**Administrator Access:**
-- Email: `admin@nairabooks.ng`
-- Password: `admin123`
-
-**Standard User Access:**
-- Email: `user@nairabooks.ng`
-- Password: `user123`
-
-### Installation
-
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open your browser to `http://localhost:5173`
-
-### Building for Production
-
-```bash
-npm run build
-```
-
-## 💳 Nigerian Payment Integration
-
-The system includes secure payment processing optimized for Nigerian businesses:
-
-- **Secure Naira Transactions**: Bank-level encryption for all Nigerian business payments
-- **Multiple Payment Methods**: Support for Nigerian and international payment methods
-- **Real-time Processing**: Instant Naira payment confirmation and recording
-- **Automatic Naira Recording**: Payments automatically added to Nigerian business expense tracking
-
-*Note: The demo uses simulated payments. For production, configure with your actual payment processor credentials.*
-
-## 📊 Key Features Breakdown
-
-### Dashboard
-- Real-time Naira-based financial metrics for Nigerian businesses
-- Interactive charts showing Nigerian business income vs expenses
-- Category breakdown with Nigerian business expense categories
-- Recent Naira transaction overview
-- Nigerian business budget utilization tracking
-
-### Transaction Management
-- Add, edit, and delete Naira income/expense entries
-- Nigerian business categorization for better organization
-- Date and Nigerian location tracking
-- Bulk operations for efficient Nigerian business management
-
-### Budget Planning
-- Create Naira budgets for Nigerian business categories
-- Visual progress tracking with Naira-based indicators
-- Period-based budgeting aligned with Nigerian business cycles
-- Naira overspend alerts and financial warnings
-
-### Reporting & Analytics
-- Comprehensive Naira-based financial statements
-- Nigerian business profit/loss analysis
-- Naira trend visualization over time
-- Export capabilities for Nigerian business compliance
-- Custom date range filtering for Nigerian fiscal periods
-
-### Admin Dashboard
-- Nigerian business user management and monitoring
-- System health indicators for business continuity
-- Activity logs and audit trails for compliance
-- Nigerian business settings and category configuration
-
-## 🎨 Design Philosophy
-
-The application follows modern design principles tailored for Nigerian businesses:
-
-- **Professional Interface**: Clean, business-ready design suitable for Nigerian enterprises
-- **Nigerian Business Branding**: Professional color scheme with Naira-focused elements
-- **Intuitive Navigation**: Logical flow designed for Nigerian business workflows
-- **Accessibility**: Compliant design with proper contrast for all users
-- **Performance**: Optimized for Nigerian internet conditions and mobile networks
-
-## 📱 Mobile Experience
-
-Special attention has been paid to mobile usability for Nigerian business owners:
-
-- Touch-friendly buttons optimized for Nigerian mobile users
-- Optimized table layouts for quick Naira transaction viewing
-- Swipe gestures for efficient Nigerian business management
-- Responsive typography for clear Naira amount display
-- Fast loading optimized for Nigerian mobile networks
-
-## 🔒 Security Features
-
-- Secure authentication suitable for Nigerian business environments
-- Role-based access control for Nigerian business hierarchies
-- Input validation and sanitization for Naira transactions
-- Secure payment processing with international standards
-- Session management and timeout for business security
-
-## 🚀 Future Enhancements
-
-Potential areas for expansion tailored to Nigerian businesses:
-
-- Multi-currency support (Naira, USD, EUR)
-- Advanced Nigerian business forecasting and analytics
-- Integration with Nigerian accounting software and banks
-- Dedicated mobile app for Nigerian business owners
-- Nigerian tax-compliant reporting templates
-- API for Nigerian fintech and business tool integrations
-
-## 📞 Support
-
-For questions or support regarding NairaBooks, please refer to the in-app help documentation designed for Nigerian businesses or contact our Nigerian business support team.
-
----
-
-**Built with ❤️ for Nigerian Small and Medium Enterprises**
-
-NairaBooks is designed to grow with your Nigerian business, providing the tools you need to manage your Naira-based finances effectively while maintaining simplicity and compliance with Nigerian business standards.
