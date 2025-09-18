@@ -18,6 +18,8 @@ import AdminDashboard from './components/Admin/AdminDashboard';
 import PaymentIntegration from './components/Payments/PaymentIntegration';
 import OnboardingModal from './components/Onboarding/OnboardingModal';
 import LandingPage from './components/Landing/LandingPage';
+import AIInsights from './components/AI/AIInsights';
+import BankingIntegration from './components/Banking/BankingIntegration';
 
 const AppContent: React.FC = () => {
   const { isAuthenticated, user } = useAuth();
@@ -43,6 +45,10 @@ const AppContent: React.FC = () => {
         return 'Financial Reports';
       case 'calculator':
         return 'Naira Calculator';
+      case 'ai-insights':
+        return 'AI Financial Insights';
+      case 'banking':
+        return 'Banking Integration';
       case 'payments':
         return 'Payment Processing';
       case 'admin':
@@ -66,6 +72,10 @@ const AppContent: React.FC = () => {
         return <Reports />;
       case 'calculator':
         return <Calculator />;
+      case 'ai-insights':
+        return <AIInsights />;
+      case 'banking':
+        return <BankingIntegration />;
       case 'payments':
         return <PaymentIntegration />;
       case 'admin':

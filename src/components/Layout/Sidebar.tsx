@@ -10,7 +10,10 @@ import {
   Users,
   Settings,
   LogOut,
-  X
+  X,
+  Brain,
+  Building,
+  Zap
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -35,6 +38,8 @@ const Sidebar: React.FC<SidebarProps> = ({
     { id: 'expenses', label: 'Expenses', icon: TrendingDown },
     { id: 'budget', label: 'Budget', icon: Target },
     { id: 'reports', label: 'Reports', icon: FileText },
+    { id: 'ai-insights', label: 'AI Insights', icon: Brain, badge: 'NEW' },
+    { id: 'banking', label: 'Banking', icon: Building },
     { id: 'payments', label: 'Payments', icon: CreditCard },
     { id: 'calculator', label: 'Calculator', icon: Calculator },
   ];
@@ -97,6 +102,11 @@ const Sidebar: React.FC<SidebarProps> = ({
               >
                 <Icon size={20} />
                 <span>{item.label}</span>
+                {(item as any).badge && (
+                  <span className="ml-auto px-2 py-0.5 bg-green-500 text-white text-xs rounded-full">
+                    {(item as any).badge}
+                  </span>
+                )}
               </button>
             );
           })}
